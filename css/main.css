@@ -49,11 +49,14 @@ header {
 	justify-content: center;
 	align-items: center;
 	flex-flow: row wrap;
+	width: 100%;
+	text-align: center;
 }
 
 
 header h1 span {
 	color: #77a466;
+	width: 100%;
 }
 
 
@@ -61,7 +64,8 @@ header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: .875em;
-	display: inline;
+	width: 100%;
+	list-style: none;
 }
 header nav ul li a{
 	text-decoration: none;
@@ -75,10 +79,12 @@ header nav ul li a{
 	justify-content: center;
 	align-items: center;
 	flex-flow: row wrap;
+	width: 100%;
 }
 
 .main-image {
     height: auto;
+	width: 100%;
 }
 
 .main-image img {
@@ -101,16 +107,13 @@ header nav ul li a{
 .section-two,
 .section-three {
 	border-top: 1px solid #eee;
+	width: 100%;
 }
 
 .section-one h3 {
 	padding: 10px 0;
 }
 
-.section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
-}
 
 .section-two h3,
 .section-three h3 {
@@ -146,6 +149,7 @@ footer {
 	justify-content: center;
 	align-items: center;
 	flex-flow: row wrap;
+	width: 100%;
 }
 footer span {
 	font-family: 'Galada', cursive;
