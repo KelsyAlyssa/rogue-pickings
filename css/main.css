@@ -1,4 +1,5 @@
 
+/**	KELSY**/
 html {
     font-size:16px;
 }
@@ -9,7 +10,6 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-flow: row wrap;
 }
 
 .container{
@@ -29,10 +29,10 @@ h3 {
 	font-weight: 700;
 }
 h1 {
-	font-size: 1.88em;
+	font-size: 1.875em;
 }
 h2 {
-	font-size: 1.12em;
+	font-size: 1.125em;
 }
 h3 {
 	font-size: .75em;
@@ -40,50 +40,61 @@ h3 {
 
 p {
 	font-size: .875em;
+	line-height: 21px;
 }
 
-/*Border is not showing*/
+ul {
+    margin: 0;
+}
+
 header {
 	border-bottom: 3px solid #77a466;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-flow: row wrap;
-	width: 100%;
-	text-align: center;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
 }
 
+header h1 {
+	margin: 0;
+    padding: 38px 20px 20px 20px; 
+    border-bottom: 3px solid #77a466; 
+    width: 100%;
+}
 
 header h1 span {
 	color: #77a466;
-	width: 100%;
 }
 
+header nav {
+    padding: 20px 0; 
+    width: 100%; 
+}
 
 header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: .875em;
-	width: 100%;
 	list-style: none;
+	padding: 10px 0;
 }
 header nav ul li a{
 	text-decoration: none;
 	color:#77a466;
 }
 
-/*The widths are in a percentage!*/
 .top-section,
 .bottom-section {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-flow: row wrap;
-	width: 100%;
 }
 
 .main-image {
-    height: auto;
+	border-bottom: 3px solid #77a466;
 	width: 100%;
 }
 
@@ -96,11 +107,12 @@ header nav ul li a{
 .main-title h2 {
 	text-align: left;
 	color: #77a466;
+	padding: 5px 0;
 }
 .main-title p {
 	padding: 0;
 	font-size: 1em;
-	line-height: 25px;
+	line-height: 1.5625;
 }
 
 .section-one,
@@ -108,16 +120,6 @@ header nav ul li a{
 .section-three {
 	border-top: 1px solid #eee;
 	width: 100%;
-}
-
-.section-one h3 {
-	padding: 10px 0;
-}
-
-
-.section-two h3,
-.section-three h3 {
-	padding: 10px 30px;
 }
 
 .menu {
@@ -132,18 +134,17 @@ header nav ul li a{
 .reviews {
 	color: #333;
 	font-size: 1em;
-	line-height: 21px;
+	line-height: 1.3125;
 }
 
 .address {
 	font-size: 1em;
-	line-height: 24px;
+	line-height: 1.5;
 }
 
 /*The widths are in a percentage!*/
 footer {
 	border-top: 3px solid #eee;
-	margin: 0 auto;
 	text-align: center;
 	display: flex;
 	justify-content: center;
@@ -151,6 +152,7 @@ footer {
 	flex-flow: row wrap;
 	width: 100%;
 }
+
 footer span {
 	font-family: 'Galada', cursive;
 	text-transform: lowercase;
@@ -158,67 +160,49 @@ footer span {
 	font-size: .875em;
 }
 
-/*Desktop*/
-@media (min-width: 1200px) {
-	.section-two {
-		border-left: 1px solid #eee;
-		border-right: 1px solid #eee;
+/*Tablet Styles Here*/
+@media all and (min-width: 768px) {
+	.bottom-section {
+		justify-content: space-between;
+        align-items: flex-start;
+        border-top: 1px solid #eee;
 	}
-	p {
-			line-height: 21px;
-			padding: 0 30px;
-		}
-header {
-	margin: 0 auto;
-}
-
-header h1 {
-    margin: 0;
-    padding: 38px 0;
-}
-
-header nav {
-    padding: 46px 0;
-}
-
-/**Nav doesn't look right desktop version**/
-header nav ul {
-    margin: 0;
-    padding: 0;
-}
-
-header nav ul li {
-	padding: 0 10px;
-}
-
-.top-section,
-.bottom-section {
-    margin: 0 auto;
-}
-
-.main-title {
-    height: auto;
-}
-
-.main-title h2 {
-    padding: 5px 0;
-
-}
-
-.section-one,
-.section-two,
-.section-three {
-    height: auto;
-}
 
 
-}
-
-/*Tablet*/
-@media (min-width: 768px) {
 	.section-one,
 	.section-two,
 	.section-three {
-		width: 33%;
+		border-top: none;
+        flex-basis: 30%;
 	}
+
+	.section-two {
+        border-left: 1px solid #eee;
+        border-right: 1px solid #eee;
+        padding: 0 20px;
+    }
+}
+
+/*Desktop Styles Here*/
+@media all and (min-width: 1200px) {
+    header {
+        justify-content: space-between;
+    }
+
+    header h1 {
+        width: 30%;
+        padding: 0;
+        border-bottom: none;
+        text-align: left;
+    }
+
+    header nav {
+        width: 40%;
+    }
+
+    header nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
 }
