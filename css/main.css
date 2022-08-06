@@ -42,7 +42,7 @@ p {
 	font-size: .875em;
 }
 
-/*The widths are in a percentage!*/
+/*Border is not showing*/
 header {
 	border-bottom: 3px solid #77a466;
 	display: flex;
@@ -156,4 +156,69 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: .875em;
+}
+
+/*Desktop*/
+@media (min-width: 1200px) {
+	.section-two {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+	}
+	p {
+			line-height: 21px;
+			padding: 0 30px;
+		}
+header {
+	margin: 0 auto;
+}
+
+header h1 {
+    margin: 0;
+    padding: 38px 0;
+}
+
+header nav {
+    padding: 46px 0;
+}
+
+/**Nav doesn't look right desktop version**/
+header nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+	padding: 0 10px;
+}
+
+.top-section,
+.bottom-section {
+    margin: 0 auto;
+}
+
+.main-title {
+    height: auto;
+}
+
+.main-title h2 {
+    padding: 5px 0;
+
+}
+
+.section-one,
+.section-two,
+.section-three {
+    height: auto;
+}
+
+
+}
+
+/*Tablet*/
+@media (min-width: 768px) {
+	.section-one,
+	.section-two,
+	.section-three {
+		width: 33%;
+	}
 }
